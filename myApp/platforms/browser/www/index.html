@@ -29,13 +29,16 @@
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">        
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">   
+        <link rel="stylesheet" href="css/animate.css">
+     
         <title>E-mu.</title>
     </head>
     <body>
         <div data-role="page" id="article1">
             <div data-role="content">
                 <div class="app">
+                    <img src="img/logo.png"/>
                     <h1>E-mu</h1>
                     <h2>The emotion based music app</h2>
                     <div id="deviceready" class="blink">
@@ -43,6 +46,15 @@
                         <p class="event received">Device is Ready</p>
                     </div>
                     <p>Swipe right to see emotions</p>
+                    <img class="treble-clef animated zoomIn" src="img/treble-clef.png"/>
+                    <div class="all-lines">
+                        <hr id="anger-note" class="lines animated slideInLeft" />
+                        <hr id="joy-note" class="lines animated slideInLeft" />
+                        <hr id="calm-note" class="lines animated slideInLeft" />
+                        <hr id="sadness-note" class="lines animated slideInLeft" />
+                        <hr id="love-note" class="lines animated slideInLeft" />
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -50,34 +62,74 @@
         <div data-role="page" id="article2">
             <div data-role="content">
             </div>
-            <img id="angry-text" onclick="angryPlaylist();" src="img/angry-text.png" />
+            <h1 onclick="angryPlaylist();"> Anger </h1>
 <!--                 <button onclick="angryPlaylist();" type="button">Click Me!</button>
- -->        
-            <img id="angryGif" src="img/angry.gif"/>
+ -->            
+                 <div class="all-lines-anger">
+                    <hr id="anger-anger-note" class="lines animated slideInLeft" />
+                        <div id="anger-circle" class="emotion-circles animated zoomIn"></div>
+                        <img class="anger-trident animated fadeInUp" src="img/anger-trident.png"/>
+                    <hr id="joy-note" class="lines animated slideInLeft" />
+                    <hr id="calm-note" class="lines animated slideInLeft" />
+                    <hr id="sadness-note" class="lines animated slideInLeft" />
+                    <hr id="love-note" class="lines animated slideInLeft" />
+                </div>
             </div>
 
         <div data-role="page" id="article3">
             <div data-role="content">
-              <p>Happy</p>
             </div>
-            <h1 onclick="happyPlaylist();"> Happy!</h1>
+            <h1 onclick="happyPlaylist();"> Joy</h1>
+
+                 <div class="all-lines-anger">
+                    <hr id="joy-joy-note" class="lines animated slideInLeft" />
+                        <div id="joy-circle" class="emotion-circles animated zoomIn"></div>
+                        <img class="anger-trident animated fadeInUp" src="img/anger-trident.png"/>
+                    <hr id="calm-note" class="lines animated slideInLeft" />
+                    <hr id="sadness-note" class="lines animated slideInLeft" />
+                    <hr id="love-note" class="lines animated slideInLeft" />
+                </div>
 
         </div>
 
         <div data-role="page" id="article4">
             <div data-role="content">
-              <p>Sad</p>
             </div>
+            <h1>Calmness</h1>
+                 <div class="all-lines-anger">
+                    <hr id="calm-calm-note" class="lines animated slideInLeft" />
+                        <div id="calm-circle" class="emotion-circles animated zoomIn"></div>
+                        <img class="anger-trident animated fadeInUp" src="img/anger-trident.png"/>                    
+                    <hr id="sadness-note" class="lines animated slideInLeft" />
+                    <hr id="love-note" class="lines animated slideInLeft" />
+                </div>
         </div>
 
         <div data-role="page" id="article5">
+            <div data-role="content">
+            </div>
+            <h1>Sadness</h1>
+                 <div class="all-lines-anger">                  
+                    <hr id="sadness-sadness-note" class="lines animated slideInLeft" />
+                        <div id="sadness-circle" class="emotion-circles animated zoomIn"></div>
+                        <img class="anger-trident animated fadeInUp" src="img/anger-trident.png"/>  
+                    <hr id="love-note" class="lines animated slideInLeft" />
+                </div>
+        </div>
+
+        <div data-role="page" id="article6">
 <!--        <div data-role="header" data-theme="b" data-position="fixed" data-id="footer">
               <a href="#article1" data-icon="home" data-iconpos="notext">Home</a>
               <h1>Emotions</h1>
             </div> -->
             <div data-role="content">
-              <p>Loving</p>
             </div>
+            <h1>Love</h1>
+                 <div class="all-lines-anger">                  
+                    <hr id="love-love-note" class="lines animated slideInLeft" />
+                        <div id="love-circle" class="emotion-circles animated zoomIn"></div>
+                        <img class="anger-trident animated fadeInUp" src="img/anger-trident.png"/>  
+                </div>
         </div>
 
       <!--  POWERED BY SOUNDCLOUD IMAGE         <img src="https://developers.soundcloud.com/assets/powered_by_large_white-de881ecad8561c2131e7676fa9e92738.png"></img> -->
