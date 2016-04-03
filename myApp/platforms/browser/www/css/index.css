@@ -16,6 +16,69 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
+@font-face {
+    font-family: 'helv_childrenregular';
+    src: url('../fonts/helv/helv_children-webfont.eot');
+    src: url('../fonts/helv/helv_children-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/helv/helv_children-webfont.woff2') format('woff2'),
+         url('../fonts/helv/helv_children-webfont.woff') format('woff'),
+         url('../fonts/helv/helv_children-webfont.ttf') format('truetype'),
+         url('../fonts/helv/helv_children-webfont.svg#helv_childrenregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'underwood_championregular';
+    src: url('../fonts/uwch/uwch-webfont.eot');
+    src: url('../fonts/uwch/uwch-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/uwch/uwch-webfont.woff2') format('woff2'),
+         url('../fonts/uwch/uwch-webfont.woff') format('woff'),
+         url('../fonts/uwch/uwch-webfont.ttf') format('truetype'),
+         url('../fonts/uwch/uwch-webfont.svg#underwood_championregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'moonlight';
+    src: url('../fonts/moon/moon_light-webfont.eot');
+    src: url('../fonts/moon/moon_light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/moon/moon_light-webfont.woff2') format('woff2'),
+         url('../fonts/moon/moon_light-webfont.woff') format('woff'),
+         url('../fonts/moon/moon_light-webfont.ttf') format('truetype'),
+         url('../fonts/moon/moon_light-webfont.svg#moonlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'odudabold';
+    src: url('../fonts/oduda/oduda-bold-demo-webfont.eot');
+    src: url('../fonts/oduda/oduda-bold-demo-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/oduda/oduda-bold-demo-webfont.woff2') format('woff2'),
+         url('../fonts/oduda/oduda-bold-demo-webfont.woff') format('woff'),
+         url('../fonts/oduda/oduda-bold-demo-webfont.ttf') format('truetype'),
+         url('../fonts/oduda/oduda-bold-demo-webfont.svg#odudabold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'fonartoregular';
+    src: url('../fonts/fonarto/fonarto-webfont.eot');
+    src: url('../fonts/fonarto/fonarto-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/fonarto/fonarto-webfont.woff2') format('woff2'),
+         url('../fonts/fonarto/fonarto-webfont.woff') format('woff'),
+         url('../fonts/fonarto/fonarto-webfont.ttf') format('truetype'),
+         url('../fonts/fonarto/fonarto-webfont.svg#fonartoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
 * {
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 }
@@ -209,12 +272,19 @@ h1 {
 }
 #article2 h1{
     color:white;
-    font-size:50px;
-    margin:40px 0 0 0;
+    font-size:60px;
+    margin:60px 0 0 0;
+    font-family: 'helv_childrenregular';
+}
+
+#article2 p{
+    color:white;
+    text-align:center;
+    font-size:.7em;
 }
 
 .all-lines-anger{
-    margin:350px 0 0 -75px;
+    margin:290px 0 0 -75px;
 }
 
 #anger-note{
@@ -258,12 +328,19 @@ h1 {
 
 #article3 h1{
     color:white;
-    font-size:50px;
-    margin:40px 0 0 0;
+    font-size:60px;
+    margin:60px 0 0 0;
+    font-family: 'odudabold';
+}
+
+#article3 p{
+    color:white;
+    text-align:center;
+    font-size:.7em;
 }
 
 .all-lines-joy{
-    margin:360px 0 0 -75px;
+    margin:300px 0 0 -75px;
 }
 
 #joy-note{
@@ -308,12 +385,19 @@ h1 {
 
 #article4 h1{
     color:white;
-    font-size:50px;
-    margin:40px 0 0 0;
+    font-size:60px;
+    margin:60px 0 0 0;
+    font-family: 'moonlight';
+}
+
+#article4 p{
+    color:white;
+    text-align:center;
+    font-size:.7em;
 }
 
 .all-lines-calm{
-    margin:370px 0 0 -75px;
+    margin:310px 0 0 -75px;
 }
 
 #calm-note{
@@ -338,6 +422,17 @@ h1 {
     border:2px solid white;
 }
 
+.calm-icon{
+    position:absolute;
+    bottom:50;
+    left:0;
+    right:0;
+    margin:-155px auto 0 auto;
+    width:60px;
+    z-index:0;
+    animation-delay:1.3s;
+}
+
 /*          SADNESS PAGE          */
 
 #article5{
@@ -346,12 +441,19 @@ h1 {
 
 #article5 h1{
     color:white;
-    font-size:50px;
-    margin:40px 0 0 0;
+    font-size:60px;
+    margin:60px 0 0 0;
+    font-family: 'underwood_championregular';
+}
+
+#article5 p{
+    color:white;
+    text-align:center;
+    font-size:.7em;
 }
 
 .all-lines-sadness{
-    margin:380px 0 0 -75px;
+    margin:320px 0 0 -75px;
 }
 
 #sadness-note{
@@ -377,6 +479,17 @@ h1 {
     border:2px solid white;
 }
 
+.sadness-icon{
+    position:absolute;
+    bottom:50;
+    left:0;
+    right:0;
+    margin:-155px auto 0 auto;
+    width:60px;
+    z-index:0;
+    animation-delay:1.3s;
+}
+
 /*          LOVE PAGE          */
 
 #article6{
@@ -385,12 +498,19 @@ h1 {
 
 #article6 h1{
     color:white;
-    font-size:50px;
-    margin:40px 0 0 0;
+    font-size:60px;
+    margin:60px 0 0 0;
+    font-family: 'fonartoregular';
+}
+
+#article6 p{
+    color:white;
+    text-align:center;
+    font-size:.7em;
 }
 
 .all-lines-love{
-    margin:390px 0 0 -75px;
+    margin:330px 0 0 -75px;
 }
 
 #love-note{
@@ -413,6 +533,17 @@ h1 {
     height:8px;
     border-radius:50%;
     border:2px solid white;
+}
+
+.love-icon{
+    position:absolute;
+    bottom:50;
+    left:0;
+    right:0;
+    margin:-150px auto 0 auto;
+    width:60px;
+    z-index:0;
+    animation-delay:1.3s;
 }
 
 
