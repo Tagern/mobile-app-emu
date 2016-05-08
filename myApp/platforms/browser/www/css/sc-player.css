@@ -1,0 +1,34 @@
+.sc-info p {
+    display: none !important;
+}
+.sc-info h4{
+	display:none !important;
+}
+.sc-info-toggle{
+	display:none !important;
+}
+.sc-info-close a{
+	display:none !important;
+}
+
+.sc-artwork-list{
+	padding:0;
+}
+
+.sc-artwork-list img{
+	width:100%;
+	margin:-15px 0 0 0;
+}
+
+.sc-artwork-list li {
+	display:none !important;
+	list-style-type:none !important;
+}
+.sc-artwork-list li.active{
+	display:block !important;
+	list-style-type:none !important;
+}
+
+.sc-player{
+
+}

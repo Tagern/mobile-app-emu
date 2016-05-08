@@ -556,3 +556,28 @@ h1 {
     margin-top:-100px;
     width:330px;
 }
+
+/*PLAYLIST STYLES */
+
+button{
+    padding:0 !important;
+    display:inline-block !important;
+    font-size:1em !important;
+    border:none !important;
+    background:none !important;
+    box-shadow:none !important;
+    background-color:transparent !important;
+}
+
+.buttons-progress{
+    display:flex;
+    background-color:grey;
+}
+
+.buttons-progress img{
+    width:25px;
+}
+
+.play-skip-buttons{
+    width:20% !important;
+}
