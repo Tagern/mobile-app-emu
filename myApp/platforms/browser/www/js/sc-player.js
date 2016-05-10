@@ -502,7 +502,7 @@
         // adding controls to the player
         $player
           .find('.sc-controls')
-            .append('<a href="#play" class="sc-play">Play</a> <a href="#pause" class="sc-pause hidden">Pause</a>')
+            .append('<a href="#play" class="sc-play"></a> <a href="#pause" class="sc-pause hidden"></a>')
           .end()
           .append('<a href="#info" class="sc-info-toggle">Info</a>')
           .append('<div class="sc-scrubber"></div>')
@@ -724,3 +724,28 @@
   });
 
 })(jQuery);
+
+window.onload=function(){
+  // var playerBtn = document.querySelector('a.sc-play');
+  // playerBtn.addEventListener('click', show_hide);
+
+  // function show_hide(){
+
+  //   document.querySelector("a.sc-play").style.display="none";
+  //   document.querySelector("a.sc-pause.hidden").style.display="none";
+
+  // }
+    var paused = false;
+    $( "a.sc-play, a.sc-pause.hidden" ).click(function() {
+      if(!paused) {
+        document.querySelector("a.sc-play").style.display="none";
+        document.querySelector("a.sc-pause.hidden").style.display="block";
+        paused = true;
+      } else{
+          document.querySelector("a.sc-pause.hidden").style.display="none";
+          document.querySelector("a.sc-play").style.display="block";
+        paused=  false;   
+     }
+
+  });
+}

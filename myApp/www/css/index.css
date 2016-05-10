@@ -181,6 +181,14 @@ h1 {
 
 /* MY STYLES START HERE */
 
+.ui-header.ui-bar-b.ui-header-fixed.slidedown {
+    background-color:black;
+    font-family: 'Ubuntu', sans-serif;  
+    font-weight:700;
+    text-shadow:none;
+    border:none;
+}
+
 
 /*       HOME PAGE          */       
 
