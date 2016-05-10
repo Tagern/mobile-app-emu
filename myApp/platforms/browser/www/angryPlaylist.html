@@ -40,8 +40,20 @@
     <body ng-app="app">
         <div data-role="playlist" id="angryPlaylist">
             <div data-role="header" data-theme="b" data-position="fixed" data-id="footer">
+                <span onclick="openNav()"><img class="menu-icon" src="http://res.cloudinary.com/dwx5v3ynx/image/upload/v1462914999/menu_o7d89a.png"/></span>
                 <h1>Angry</h1>
             </div>
+            <div id="mySidenav" class="sidenav">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+              <a href="index.html">Home</a>
+              <a href="#">Anger</a>
+              <a href="#">Joy</a>
+              <a href="#">Serenity</a>
+              <a href="#">Sadness</a>
+              <a href="#">Love</a>
+
+            </div>
+
 <!-- 
             <audio id="player" src="http://api.soundcloud.com/tracks/172641967/stream?client_id=011f459dffafe1e481d9a287a17656cd" preload="auto" />
  -->

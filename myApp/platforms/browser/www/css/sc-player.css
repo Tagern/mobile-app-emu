@@ -19,6 +19,14 @@ a:focus{
 	color:white;
 }
 
+a:visited{
+	text-decoration:none;
+}
+
+.sc-player{
+	background-color:#111111;
+}
+
 .sc-info a{
 	text-shadow:none;
 	color:white;
@@ -54,7 +62,7 @@ a.sc-info-close {
 }
 
 .sc-controls{
-	background-color: #2f2f2f;
+	background-color: #161616;
     width: 30%;
     height: 115px;
     margin-top: -115px;
@@ -69,8 +77,8 @@ a.sc-play{
 	background-repeat: no-repeat;
 	padding:26px;
 	position:relative;
-	top:35px;
-	left:30px;
+	top:40px;
+	left:31px;
 	display:block;
 }
 
@@ -146,16 +154,14 @@ ol.sc-trackslist li {
     padding: 15px 0 15px 0;
 }
 
-.sc-player{
-	background-color:#1f1f1f;
-}
+
 .sc-scrubber {
 	position: relative;
 	top:-335px;
 	text-align:right;
 	float:right;
     height: 20px;
-    background: rgba(0, 0, 0, 0.7);
+    background: #161616;
     width:60%;
     margin:7px;
 }
@@ -179,7 +185,7 @@ ol.sc-trackslist li {
 
 .sc-scrubber .sc-buffer {
     height: 20px;
-    background:#2f2f2f;
+    background:#191919;
     position: relative;
     top: 0px;
 }
@@ -201,5 +207,97 @@ ol.sc-trackslist li {
 .sc-time-indicators {
     color: white;
     text-shadow: none;
+    padding-top:4px;
+}
+.active{
+
+}
+/* Side navigation style */
+.ui-header.ui-bar-b.ui-header-fixed.slidedown {
+    background-color:white;
+    font-family: 'Ubuntu', sans-serif;  
+    font-weight:700;
+    text-shadow:none;
+    border:none;
+    border-bottom:1px solid #111111;
+    position:fixed;
+    padding:25px 0 0 0;
+    color:black;
 }
 
+.menu-icon{
+	width:20px;
+	position:absolute;
+	top:40px;
+	left:15px;
+	z-index:2000;
+}
+
+a.ui-link {
+    text-shadow: none;
+}
+
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    display: block;
+    transition: 0.3s;
+    color:white;
+}
+
+.sidenav a:nth-child(odd){
+
+}
+
+.sidenav a{
+
+}
+
+.sidenav a:visited {
+	color:white;
+}
+
+a.closebtn.ui-link {
+	padding:4px;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+
+/* Position and style the close button (top right corner) */
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px !important;
+    margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
