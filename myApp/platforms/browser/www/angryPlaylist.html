@@ -39,8 +39,9 @@
     </head>
     <body ng-app="app">
         <div id="offline-text">
-            <h1> It appears you are offline!</h1>
-            <p>Connect to the internet so the application can continue</p>
+            <img id="offline-icon" src="img/noInternet.png"/>
+            <h1>you're offline!</h1>
+            <p>Please connect to the internet to continue</p>
         </div>
         <div id="main-container">
             <div data-role="playlist" id="angryPlaylist">
@@ -51,11 +52,11 @@
                 <div id="mySidenav" class="sidenav">
                   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                   <a onclick="homepage();">Home</a>
-                  <a class="nav-anger" href="#">Anger</a>
-                  <a class="nav-joy" href="#">Joy</a>
-                  <a class="nav-serenity" href="#">Serenity</a>
-                  <a class="nav-sadness" href="#">Sadness</a>
-                  <a class="nav-love" href="#">Love</a>
+                  <a onclick="angrypage();"class="nav-anger" href="#">Anger</a>
+                  <a onclick="joypage();"class="nav-joy" href="#">Joy</a>
+                  <a onclick="serenitypage();"class="nav-serenity" href="#">Serenity</a>
+                  <a onclick="sadnesspage();"class="nav-sadness" href="#">Sadness</a>
+                  <a onclick="lovepage();"class="nav-love" href="#">Love</a>
                   <img src="img/logo.png"/>
                 </div>
 
@@ -92,18 +93,19 @@
         </ul>
     </div>
      -->
+    
+    <div id="loadImg"><div><img src="img/loading.gif" /></div></div>
+
     <a href="https://soundcloud.com/user-292342266/sets/angry" class="sc-player">My new dub track</a>
 
 
     <!--             <audio id="playerStream"></audio> -->
     <!-- 
                 <button onclick="playSounds()">Skip song</button>
-
+    
                 <div id ="url"></div>
                 <img id="img"> -->
-            <footer>
-                <button onclick="location.href = 'index.html'">Go home</button>
-            </footer>
+
             </div>
         </div>
 
@@ -124,7 +126,6 @@
  -->
         <script type="text/javascript" src="js/soundcloud.player.api.js"></script>
         <script type="text/javascript" src="js/sc-player.js"></script>
-
 
 <!-- 
         <script type="text/javascript" src="js/soundcloud.player.api.js"></script>

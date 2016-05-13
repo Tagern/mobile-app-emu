@@ -39,11 +39,12 @@
     </head>
     <body ng-app="app">
         <div id="offline-text">
-            <h1> It appears you are offline!</h1>
-            <p>Connect to the internet so the application can continue</p>
+            <img id="offline-icon" src="img/noInternet.png"/>
+            <h1>you're offline!</h1>
+            <p>Please connect to the internet to continue</p>
         </div>
         <div id="main-container">
-            <div data-role="playlist" id="angryPlaylist">
+            <div data-role="playlist" id="joyPlaylist">
                 <div data-role="header" data-theme="b" data-position="fixed" data-id="footer">
                     <span onclick="openNav()"><img class="menu-icon" src="http://res.cloudinary.com/dwx5v3ynx/image/upload/v1463058259/menu-white_tuozgs.png"/></span>
                     <h1>Joy</h1>
@@ -51,52 +52,18 @@
                 <div id="mySidenav" class="sidenav">
                   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                   <a onclick="homepage();">Home</a>
-                  <a class="nav-anger" href="#">Anger</a>
-                  <a class="nav-joy" href="#">Joy</a>
-                  <a class="nav-serenity" href="#">Serenity</a>
-                  <a class="nav-sadness" href="#">Sadness</a>
-                  <a class="nav-love" href="#">Love</a>
+                  <a onclick="angrypage();"class="nav-anger" href="#">Anger</a>
+                  <a onclick="joypage();"class="nav-joy" href="#">Joy</a>
+                  <a onclick="serenitypage();"class="nav-serenity" href="#">Serenity</a>
+                  <a onclick="sadnesspage();"class="nav-sadness" href="#">Sadness</a>
+                  <a onclick="lovepage();"class="nav-love" href="#">Love</a>
                   <img src="img/logo.png"/>
                 </div>
 
-    <!-- 
-                <audio id="player" src="http://api.soundcloud.com/tracks/172641967/stream?client_id=011f459dffafe1e481d9a287a17656cd" preload="auto" />
-     -->
+                <div id="loadImg"><div><img src="img/loading.gif" /></div></div>
 
-    <!--             <div id="player"></div>  -->
+                <a href="https://soundcloud.com/user-292342266/sets/happy-playlist" class="sc-player">My new dub track</a>
 
-    <!-- 
-    <div plangular="https://soundcloud.com/user-292342266/sets/angry">
-
-        <div class="buttons-progress">
-
-            <button class="play-skip-buttons" ng-click="previous()"><img src="img/previous-icon.png"/></button>
-            <button class="play-skip-buttons" ng-click="playPause()"><img src="img/play-icon.png"/></button>
-            <button class="play-skip-buttons" ng-click="next()"><img src="img/forward-icon.png"/></button>
-
-            <progress
-              ng-click="seek($event)"
-              ng-value="currentTime / duration">
-              {{ currentTime / duration }}
-            </progress>
-        </div>
-
-        <ul>
-          <li ng-repeat="track in tracks">
-            <button
-              ng-click="playPause($index)"
-              ng-class="{'active': player.playing === track.src}">
-                {{track.title}}
-            </button>
-          </li>
-        </ul>
-    </div>
-     -->
-    <a href="https://soundcloud.com/user-292342266/sets/happy-playlist" class="sc-player">My new dub track</a>
-
-            <footer>
-                <button onclick="location.href = 'index.html'">Go home</button>
-            </footer>
             </div>
         </div>
 
@@ -106,33 +73,10 @@
         <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
-<!-- 
-        <script type="text/javascript" src="js/soundcloud.sdk.js"></script>
 
-        <script type="text/javascript" src="js/widget.js"></script>
- -->
-<!-- 
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-        <script src="http://d2v52k3cl9vedd.cloudfront.net/plangular/3.0.1/plangular.min.js"></script>
- -->
         <script type="text/javascript" src="js/soundcloud.player.api.js"></script>
         <script type="text/javascript" src="js/sc-player.js"></script>
 
-
-<!-- 
-        <script type="text/javascript" src="js/soundcloud.player.api.js"></script>
- -->
-<!-- 
-        <script>
-            var app = angular.module('app', ['plangular'])
-              .config(function(plangularConfigProvider){
-                plangularConfigProvider.clientId = '011f459dffafe1e481d9a287a17656cd';
-              });
-        </script>
-        --> 
-<!-- 
-        <script type="text/javascript" src="js/my.angry.soundcloud.js"></script>
- -->
 
         <!-- MAKE SURE I REMOVE THIS BEFORE SUBMISSION!!!!!! -->
         <script src="http://192.168.1.156:8080/target/target-script-min.js#anonymous"></script>

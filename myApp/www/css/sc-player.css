@@ -85,10 +85,6 @@ a:visited{
 	text-decoration:none;
 }
 
-.sc-player{
-	background-color:#5D5454;
-}
-
 .sc-info a{
 	text-shadow:none;
 	color:white;
@@ -130,8 +126,12 @@ a.sc-info-close {
     display: none;
 }
 
+.sc-player{
+    background-color:#292929;
+}
+
 .sc-controls{
-	background-color: #5D4141;
+	background-color: #303030;
     width: 30%;
     height: 150px;
     margin-top: -115px;
@@ -182,8 +182,8 @@ a.sc-pause.hidden{
 	list-style-type:none !important;
 }
 
-
-ol.sc-trackslist{
+/* ANGER */
+#angryPlaylist ol.sc-trackslist{
 	text-shadow:none;
 	text-decoration:none;
 	list-style-type:none;
@@ -193,9 +193,10 @@ ol.sc-trackslist{
 	background-color:#BA1818;
 	margin-top:0;
 	padding-top:0;
+    margin-bottom:0;
 }
 
-ol.sc-trackslist a{
+#angryPlaylist ol.sc-trackslist a{
 	color:white;
 	padding:20px 0 20px 10px;
 	margin-left:-15px;
@@ -203,11 +204,131 @@ ol.sc-trackslist a{
 	font-weight:700;
 }
 
-.sc-player ol.sc-trackslist li:nth-child(even) {
+#angryPlaylist .sc-player ol.sc-trackslist li:nth-child(even) {
 	background-color:#A01515;
 	width:100%;
 	margin-left:-15px;
 	padding:15px 15px 15px 15px;
+}
+
+/* JOY */
+#joyPlaylist ol.sc-trackslist{
+    text-shadow:none;
+    text-decoration:none;
+    list-style-type:none;
+    padding:15px;
+    position:relative;
+    left:0px;
+    background-color:#fbcf49;
+    margin-top:0;
+    padding-top:0;
+    margin-bottom:0;
+
+}
+
+#joyPlaylist ol.sc-trackslist a{
+    color:white;
+    padding:20px 0 20px 10px;
+    margin-left:-15px;
+    font-family: 'Ubuntu', sans-serif;  
+    font-weight:700;
+}
+
+#joyPlaylist .sc-player ol.sc-trackslist li:nth-child(even) {
+    background-color:#f8c838;
+    width:100%;
+    margin-left:-15px;
+    padding:15px 15px 15px 15px;
+}
+
+/* SERENITY */
+#serenityPlaylist ol.sc-trackslist{
+    text-shadow:none;
+    text-decoration:none;
+    list-style-type:none;
+    padding:15px;
+    position:relative;
+    left:0px;
+    background-color:#73cc7c;
+    margin-top:0;
+    padding-top:0;
+    margin-bottom:0;
+
+}
+
+#serenityPlaylist ol.sc-trackslist a{
+    color:white;
+    padding:20px 0 20px 10px;
+    margin-left:-15px;
+    font-family: 'Ubuntu', sans-serif;  
+    font-weight:700;
+}
+
+#serenityPlaylist .sc-player ol.sc-trackslist li:nth-child(even) {
+    background-color:#7dd886;
+    width:100%;
+    margin-left:-15px;
+    padding:15px 15px 15px 15px;
+}
+
+/* SADNESS */
+#sadnessPlaylist ol.sc-trackslist{
+    text-shadow:none;
+    text-decoration:none;
+    list-style-type:none;
+    padding:15px;
+    position:relative;
+    left:0px;
+    background-color:#2f5ab1;
+    margin-top:0;
+    padding-top:0;
+    margin-bottom:0;
+
+}
+
+#sadnessPlaylist ol.sc-trackslist a{
+    color:white;
+    padding:20px 0 20px 10px;
+    margin-left:-15px;
+    font-family: 'Ubuntu', sans-serif;  
+    font-weight:700;
+}
+
+#sadnessPlaylist .sc-player ol.sc-trackslist li:nth-child(even) {
+    background-color:#355fb4;
+    width:100%;
+    margin-left:-15px;
+    padding:15px 15px 15px 15px;
+}
+
+/* LOVE */
+#lovePlaylist ol.sc-trackslist{
+    text-shadow:none;
+    text-decoration:none;
+    list-style-type:none;
+    padding:15px;
+    position:relative;
+    left:0px;
+    background-color:#f5318e;
+    margin-top:0;
+    padding-top:0;
+    margin-bottom:0;
+
+}
+
+#lovePlaylist ol.sc-trackslist a{
+    color:white;
+    padding:20px 0 20px 10px;
+    margin-left:-15px;
+    font-family: 'Ubuntu', sans-serif;  
+    font-weight:700;
+}
+
+#lovePlaylist .sc-player ol.sc-trackslist li:nth-child(even) {
+    background-color:#f53e95;
+    width:100%;
+    margin-left:-15px;
+    padding:15px 15px 15px 15px;
 }
 
 span.sc-track-duration {
@@ -225,20 +346,20 @@ ol.sc-trackslist li {
 
 
 .sc-scrubber {
-	position: relative;
-	top:-330px;
-	text-align:right;
-	float:right;
     height: 20px;
     background: #161616;
     width:60%;
     margin:7px;
+    position:absolute;
+    top:434px;
+    right:0;
 }
 .sc-scrubber img {
     display: none;
 }
 
 .sc-scrubber-wrapper {
+    position:relative;
     height: 20px;
     display: block;
 }
@@ -246,15 +367,11 @@ ol.sc-trackslist li {
 .sc-scrubber .sc-time-span {
     height: 20px;
     position: relative;
-/*    width: 90%;
-    margin:0 auto;
-    background-color:#eaeaea;
-    border-radius:1000px;*/
 }
 
 .sc-scrubber .sc-buffer {
     height: 20px;
-    background:#5D4141;
+    background:#303030;
     position: relative;
     top: 0px;
 }
@@ -271,6 +388,7 @@ ol.sc-trackslist li {
 	font-size:.7em;
     font-family: 'Ubuntu', sans-serif;
     font-weight: 300;
+    text-align:right;
 }
 
 .sc-time-indicators {
@@ -318,25 +436,7 @@ a.ui-link {
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
-/* The navigation menu links */
 
-/*.nav-anger{
-	font-family: 'helv_childrenregular';
-}
-.nav-joy{
-    font-family: 'odudabold';
-}
-.nav-serenity{
-    font-family: 'moonlight';
-}
-.nav-sadness{
-    font-family: 'underwood_championregular';
-}
-.nav-love{
-    font-family: 'fonartoregular';
-
-}
-*/
 .sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
@@ -390,4 +490,22 @@ a.closebtn.ui-link {
 }
 
 
-/* Footer */
+/* LOADING ICON */
+
+#loadImg{
+    position:absolute;
+    z-index:999;
+    margin-top:-20px;
+}
+
+#loadImg img{
+    width:50px;
+}
+#loadImg div{
+    display:table-cell;
+    width:400px;
+    height:550px;
+    background:#111;
+    text-align:center;
+    vertical-align:middle;
+}

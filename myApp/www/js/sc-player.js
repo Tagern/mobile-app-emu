@@ -765,4 +765,10 @@ function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
 
+// loading bar
 
+setTimeout(function(){
+
+  $("#loadImg").fadeOut(500);
+  // document.getElementById('loadImg').style.display='none';
+}, 2000);

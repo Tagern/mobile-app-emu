@@ -87,9 +87,33 @@ function angryPlaylist() {
 function happyPlaylist() {
     window.location.href = "happyPlaylist.html"
 }
+function serenityPlaylist() {
+    window.location.href = "serenityPlaylist.html"
+}
+function sadnessPlaylist() {
+    window.location.href = "sadnessPlaylist.html"
+}
+function lovePlaylist() {
+    window.location.href = "lovePlaylist.html"
+}
 
 function homepage(){
     window.location.href = "index.html"
+}
+function angrypage(){
+    window.location.href = "index.html#article2"
+}
+function joypage(){
+    window.location.href = "index.html#article3"
+}
+function serenitypage(){
+    window.location.href = "index.html#article4"
+}
+function sadnesspage(){
+    window.location.href = "index.html#article5"
+}
+function lovepage(){
+    window.location.href = "index.html#article6"
 }
 
 /* END END ONCLICKS TO LINK TO THE RELEVANT PLAYLIST PAGE END END*/

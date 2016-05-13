@@ -39,7 +39,7 @@
     </head>
     <body>
         <div id="offline-text">
-            <img id="offline-icon" src="http://res.cloudinary.com/dwx5v3ynx/image/upload/v1463085309/no-internet_d4elz2.png"/>
+            <img id="offline-icon" src="img/noInternet.png"/>
             <h1>you're offline!</h1>
             <p>Please connect to the internet to continue</p>
         </div>
@@ -54,7 +54,8 @@
                             <p class="event listening">Connecting to Device</p>
                             <p class="event received">Device is Ready</p>
                         </div>
-                        <p>Swipe right to see emotions</p>
+                        <p>Swipe left to see emotions</p>
+                        <img id="swipe-left" src="img/swipeLeft.gif"/>
                         <img class="treble-clef animated zoomIn" src="img/treble-clef.png"/>
                         <div class="all-lines">
                             <hr id="home-anger-note" class="lines animated slideInLeft" />
@@ -104,7 +105,7 @@
             <div data-role="page" id="article4">
                 <div data-role="content">
                 </div>
-                <h1>Serenity</h1>
+                <h1 onclick="serenityPlaylist();">Serenity</h1>
                 <p>Click to listen to this playlist</p>
                      <div class="all-lines-calm">
                         <hr id="calm-calm-note" class="lines animated slideInLeft" />
@@ -118,7 +119,7 @@
             <div data-role="page" id="article5">
                 <div data-role="content">
                 </div>
-                <h1>Sadness</h1>
+                <h1 onclick="sadnessPlaylist();">Sadness</h1>
                 <p>Click to listen to this playlist</p>
                      <div class="all-lines-sadness">                  
                         <hr id="sadness-sadness-note" class="lines animated slideInLeft" />
@@ -135,7 +136,7 @@
                 </div> -->
                 <div data-role="content">
                 </div>
-                <h1>Love</h1>
+                <h1 onclick="lovePlaylist();">Love</h1>
                 <p>Click to listen to this playlist</p>
                      <div class="all-lines-love">                  
                         <hr id="love-love-note" class="lines animated slideInLeft" />
