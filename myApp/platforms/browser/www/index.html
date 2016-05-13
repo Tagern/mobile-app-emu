@@ -28,6 +28,9 @@
 
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+
+        <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,700,500,300' rel='stylesheet' type='text/css'>
+
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">   
         <link rel="stylesheet" href="css/animate.css">
@@ -35,108 +38,112 @@
         <title>E-mu.</title>
     </head>
     <body>
-        <div data-role="page" id="article1">
-            <div data-role="content">
-                <div class="app">
-                    <img src="img/logo.png"/>
-                    <h1>E-mu</h1>
-                    <h2>The emotion based music app</h2>
-                    <div id="deviceready" class="blink">
-                        <p class="event listening">Connecting to Device</p>
-                        <p class="event received">Device is Ready</p>
+        <div id="offline-text">
+            <img id="offline-icon" src="http://res.cloudinary.com/dwx5v3ynx/image/upload/v1463085309/no-internet_d4elz2.png"/>
+            <h1>you're offline!</h1>
+            <p>Please connect to the internet to continue</p>
+        </div>
+        <div id="main-container">
+            <div data-role="page" id="article1">
+                <div data-role="content">
+                    <div class="app">
+                        <img src="img/logo.png"/>
+                        <h1>E-mu</h1>
+                        <h2>The emotion based music app</h2>
+                        <div id="deviceready" class="blink">
+                            <p class="event listening">Connecting to Device</p>
+                            <p class="event received">Device is Ready</p>
+                        </div>
+                        <p>Swipe right to see emotions</p>
+                        <img class="treble-clef animated zoomIn" src="img/treble-clef.png"/>
+                        <div class="all-lines">
+                            <hr id="home-anger-note" class="lines animated slideInLeft" />
+                            <hr id="home-joy-note" class="lines animated slideInLeft" />
+                            <hr id="home-calm-note" class="lines animated slideInLeft" />
+                            <hr id="home-sadness-note" class="lines animated slideInLeft" />
+                            <hr id="home-love-note" class="lines animated slideInLeft" />
+                        </div>
+
                     </div>
-                    <p>Swipe right to see emotions</p>
-                    <img class="treble-clef animated zoomIn" src="img/treble-clef.png"/>
-                    <div class="all-lines">
-                        <hr id="home-anger-note" class="lines animated slideInLeft" />
-                        <hr id="home-joy-note" class="lines animated slideInLeft" />
-                        <hr id="home-calm-note" class="lines animated slideInLeft" />
-                        <hr id="home-sadness-note" class="lines animated slideInLeft" />
-                        <hr id="home-love-note" class="lines animated slideInLeft" />
+                </div>
+            </div>
+
+            <div data-role="page" id="article2">
+                <div data-role="content">
+                </div>
+                <h1 onclick="angryPlaylist();"> Anger </h1>
+                <p>Click to listen to this playlist</p>        
+                     <div class="all-lines-anger">
+                        <hr id="anger-anger-note" class="lines animated slideInLeft" />
+                            <div id="anger-circle" class="emotion-circles animated zoomIn"></div>
+                            <img class="anger-icon animated fadeInUp" src="img/anger-icon.png"/>
+                        <hr id="joy-note" class="lines animated slideInLeft" />
+                        <hr id="calm-note" class="lines animated slideInLeft" />
+                        <hr id="sadness-note" class="lines animated slideInLeft" />
+                        <hr id="love-note" class="lines animated slideInLeft" />
+                    </div>
+                </div>
+
+            <div data-role="page" id="article3">
+                <div data-role="content">
+                </div>
+                <h1 onclick="happyPlaylist();">Joy</h1>
+                <p>Click to listen to this playlist</p>
+
+                     <div class="all-lines-joy">
+                        <hr id="joy-joy-note" class="lines animated slideInLeft" />
+                            <div id="joy-circle" class="emotion-circles animated zoomIn"></div>
+                            <img class="joy-icon animated fadeInUp" src="img/joy-icon.png"/>
+                        <hr id="calm-note" class="lines animated slideInLeft" />
+                        <hr id="sadness-note" class="lines animated slideInLeft" />
+                        <hr id="love-note" class="lines animated slideInLeft" />
                     </div>
 
+            </div>
+
+            <div data-role="page" id="article4">
+                <div data-role="content">
                 </div>
+                <h1>Serenity</h1>
+                <p>Click to listen to this playlist</p>
+                     <div class="all-lines-calm">
+                        <hr id="calm-calm-note" class="lines animated slideInLeft" />
+                            <div id="calm-circle" class="emotion-circles animated zoomIn"></div>
+                            <img class="calm-icon animated fadeInUp" src="img/calm-icon.png"/>                    
+                        <hr id="sadness-note" class="lines animated slideInLeft" />
+                        <hr id="love-note" class="lines animated slideInLeft" />
+                    </div>
+            </div>
+
+            <div data-role="page" id="article5">
+                <div data-role="content">
+                </div>
+                <h1>Sadness</h1>
+                <p>Click to listen to this playlist</p>
+                     <div class="all-lines-sadness">                  
+                        <hr id="sadness-sadness-note" class="lines animated slideInLeft" />
+                            <div id="sadness-circle" class="emotion-circles animated zoomIn"></div>
+                            <img class="sadness-icon animated fadeInUp" src="img/sadness-icon.png"/>  
+                        <hr id="love-note" class="lines animated slideInLeft" />
+                    </div>
+            </div>
+
+            <div data-role="page" id="article6">
+    <!--        <div data-role="header" data-theme="b" data-position="fixed" data-id="footer">
+                  <a href="#article1" data-icon="home" data-iconpos="notext">Home</a>
+                  <h1>Emotions</h1>
+                </div> -->
+                <div data-role="content">
+                </div>
+                <h1>Love</h1>
+                <p>Click to listen to this playlist</p>
+                     <div class="all-lines-love">                  
+                        <hr id="love-love-note" class="lines animated slideInLeft" />
+                            <div id="love-circle" class="emotion-circles animated zoomIn"></div>
+                            <img class="love-icon animated fadeInUp" src="img/love-icon.png"/>  
+                    </div>
             </div>
         </div>
-
-        <div data-role="page" id="article2">
-            <div data-role="content">
-            </div>
-            <h1 onclick="angryPlaylist();"> Anger </h1>
-            <p>Click to listen to this playlist</p>
-<!--                 <button onclick="angryPlaylist();" type="button">Click Me!</button>
- -->            
-                 <div class="all-lines-anger">
-                    <hr id="anger-anger-note" class="lines animated slideInLeft" />
-                        <div id="anger-circle" class="emotion-circles animated zoomIn"></div>
-                        <img class="anger-icon animated fadeInUp" src="img/anger-icon.png"/>
-                    <hr id="joy-note" class="lines animated slideInLeft" />
-                    <hr id="calm-note" class="lines animated slideInLeft" />
-                    <hr id="sadness-note" class="lines animated slideInLeft" />
-                    <hr id="love-note" class="lines animated slideInLeft" />
-                </div>
-            </div>
-
-        <div data-role="page" id="article3">
-            <div data-role="content">
-            </div>
-            <h1 onclick="happyPlaylist();">Joy</h1>
-            <p>Click to listen to this playlist</p>
-
-                 <div class="all-lines-joy">
-                    <hr id="joy-joy-note" class="lines animated slideInLeft" />
-                        <div id="joy-circle" class="emotion-circles animated zoomIn"></div>
-                        <img class="joy-icon animated fadeInUp" src="img/joy-icon.png"/>
-                    <hr id="calm-note" class="lines animated slideInLeft" />
-                    <hr id="sadness-note" class="lines animated slideInLeft" />
-                    <hr id="love-note" class="lines animated slideInLeft" />
-                </div>
-
-        </div>
-
-        <div data-role="page" id="article4">
-            <div data-role="content">
-            </div>
-            <h1>Serenity</h1>
-            <p>Click to listen to this playlist</p>
-                 <div class="all-lines-calm">
-                    <hr id="calm-calm-note" class="lines animated slideInLeft" />
-                        <div id="calm-circle" class="emotion-circles animated zoomIn"></div>
-                        <img class="calm-icon animated fadeInUp" src="img/calm-icon.png"/>                    
-                    <hr id="sadness-note" class="lines animated slideInLeft" />
-                    <hr id="love-note" class="lines animated slideInLeft" />
-                </div>
-        </div>
-
-        <div data-role="page" id="article5">
-            <div data-role="content">
-            </div>
-            <h1>Sadness</h1>
-            <p>Click to listen to this playlist</p>
-                 <div class="all-lines-sadness">                  
-                    <hr id="sadness-sadness-note" class="lines animated slideInLeft" />
-                        <div id="sadness-circle" class="emotion-circles animated zoomIn"></div>
-                        <img class="sadness-icon animated fadeInUp" src="img/sadness-icon.png"/>  
-                    <hr id="love-note" class="lines animated slideInLeft" />
-                </div>
-        </div>
-
-        <div data-role="page" id="article6">
-<!--        <div data-role="header" data-theme="b" data-position="fixed" data-id="footer">
-              <a href="#article1" data-icon="home" data-iconpos="notext">Home</a>
-              <h1>Emotions</h1>
-            </div> -->
-            <div data-role="content">
-            </div>
-            <h1>Love</h1>
-            <p>Click to listen to this playlist</p>
-                 <div class="all-lines-love">                  
-                    <hr id="love-love-note" class="lines animated slideInLeft" />
-                        <div id="love-circle" class="emotion-circles animated zoomIn"></div>
-                        <img class="love-icon animated fadeInUp" src="img/love-icon.png"/>  
-                </div>
-        </div>
-
       <!--  POWERED BY SOUNDCLOUD IMAGE         <img src="https://developers.soundcloud.com/assets/powered_by_large_white-de881ecad8561c2131e7676fa9e92738.png"></img> -->
 
 
@@ -148,6 +155,8 @@
             app.initialize();
         </script>
 
+
+        <!-- MAKE SURE I REMOVE THIS BEFORE SUBMISSION!!!!!! -->
         <script src="http://192.168.1.156:8080/target/target-script-min.js#anonymous"></script>
         
     </body>

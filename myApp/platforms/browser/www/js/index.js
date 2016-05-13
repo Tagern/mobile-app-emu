@@ -88,7 +88,29 @@ function happyPlaylist() {
     window.location.href = "happyPlaylist.html"
 }
 
+function homepage(){
+    window.location.href = "index.html"
+}
+
 /* END END ONCLICKS TO LINK TO THE RELEVANT PLAYLIST PAGE END END*/
 
+/* CACHING IMAGES */
 
 
+/* SHOWING INTERNET CONNECTION */
+
+var internetOff = document.addEventListener("offline", offlineFunction, false);
+var internetOn = document.addEventListener("online", onlineFunction, false);
+
+
+function offlineFunction() {
+    document.getElementById('main-container').style.display="none";
+    document.getElementById('offline-text').style.display="block";
+
+}
+
+function onlineFunction() {
+    document.getElementById('main-container').style.display="block";
+    document.getElementById('offline-text').style.display="none";
+
+}

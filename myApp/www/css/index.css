@@ -582,3 +582,35 @@ button{
 .play-skip-buttons{
     width:20% !important;
 }
+
+/* OFFLINE TEXT */
+
+#offline-icon{
+    width:100px;
+    margin: 45% 0 -60px 33%;
+}
+
+#offline-text{
+    background-color:#1e1e1e;
+    display:none;
+    height:100%;
+    padding:0 0 1px 0;
+
+}
+
+#offline-text h1{
+    font-family: 'Ubuntu', sans-serif;    
+    font-weight:800;
+    font-size:1.2em;
+    padding:30% 0 0 0;
+    color:white;
+}
+
+#offline-text p{
+    font-family: 'Ubuntu', sans-serif;    
+    font-weight:400;
+    font-size:.8em;
+    text-align:center;
+    color:#c9c9c9;
+    text-shadow:none;
+}

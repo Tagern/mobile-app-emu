@@ -1,3 +1,65 @@
+@font-face {
+    font-family: 'helv_childrenregular';
+    src: url('../fonts/helv/helv_children-webfont.eot');
+    src: url('../fonts/helv/helv_children-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/helv/helv_children-webfont.woff2') format('woff2'),
+         url('../fonts/helv/helv_children-webfont.woff') format('woff'),
+         url('../fonts/helv/helv_children-webfont.ttf') format('truetype'),
+         url('../fonts/helv/helv_children-webfont.svg#helv_childrenregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'underwood_championregular';
+    src: url('../fonts/uwch/uwch-webfont.eot');
+    src: url('../fonts/uwch/uwch-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/uwch/uwch-webfont.woff2') format('woff2'),
+         url('../fonts/uwch/uwch-webfont.woff') format('woff'),
+         url('../fonts/uwch/uwch-webfont.ttf') format('truetype'),
+         url('../fonts/uwch/uwch-webfont.svg#underwood_championregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'moonlight';
+    src: url('../fonts/moon/moon_light-webfont.eot');
+    src: url('../fonts/moon/moon_light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/moon/moon_light-webfont.woff2') format('woff2'),
+         url('../fonts/moon/moon_light-webfont.woff') format('woff'),
+         url('../fonts/moon/moon_light-webfont.ttf') format('truetype'),
+         url('../fonts/moon/moon_light-webfont.svg#moonlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'odudabold';
+    src: url('../fonts/oduda/oduda-bold-demo-webfont.eot');
+    src: url('../fonts/oduda/oduda-bold-demo-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/oduda/oduda-bold-demo-webfont.woff2') format('woff2'),
+         url('../fonts/oduda/oduda-bold-demo-webfont.woff') format('woff'),
+         url('../fonts/oduda/oduda-bold-demo-webfont.ttf') format('truetype'),
+         url('../fonts/oduda/oduda-bold-demo-webfont.svg#odudabold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'fonartoregular';
+    src: url('../fonts/fonarto/fonarto-webfont.eot');
+    src: url('../fonts/fonarto/fonarto-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/fonarto/fonarto-webfont.woff2') format('woff2'),
+         url('../fonts/fonarto/fonarto-webfont.woff') format('woff'),
+         url('../fonts/fonarto/fonarto-webfont.ttf') format('truetype'),
+         url('../fonts/fonarto/fonarto-webfont.svg#fonartoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
 a{
 	text-decoration:none;
 }
@@ -24,7 +86,7 @@ a:visited{
 }
 
 .sc-player{
-	background-color:#111111;
+	background-color:#5D5454;
 }
 
 .sc-info a{
@@ -42,17 +104,24 @@ a:visited{
 	font-size:.9em;
 	text-align:right;
 	padding:5px 7px 0 5px;
-	margin:-13px 0 5px 0;
+	margin:-15px 0 5px 0;
 }
+
 .sc-info h4{
 	color:white;
 	font-family: 'Ubuntu', sans-serif;	
-	font-weight:400;
-	font-size:.7em;
+	font-weight:300;
+	font-size:.6em;
 	text-align:right;
 	padding:5px 7px 5px 5px;
-	margin:0 0 45px 0;
+	margin:-5px 0 5px 0;
+	text-shadow:none;
 }
+
+.sc-info h4 a{
+	font-weight:400;
+}
+
 .sc-info-toggle{
 	display:none !important;
 }
@@ -62,9 +131,9 @@ a.sc-info-close {
 }
 
 .sc-controls{
-	background-color: #161616;
+	background-color: #5D4141;
     width: 30%;
-    height: 115px;
+    height: 150px;
     margin-top: -115px;
 }
 .sc-controls a {
@@ -77,8 +146,8 @@ a.sc-play{
 	background-repeat: no-repeat;
 	padding:26px;
 	position:relative;
-	top:40px;
-	left:31px;
+	top:85px;
+	left:35px;
 	display:block;
 }
 
@@ -89,8 +158,8 @@ a.sc-pause.hidden{
 	background-repeat: no-repeat;
 	padding:20px;
 	position:relative;
-	top:40px;
-	left:30px;
+	top:85px;
+	left:35px;
 	display:none;
 }
 
@@ -157,7 +226,7 @@ ol.sc-trackslist li {
 
 .sc-scrubber {
 	position: relative;
-	top:-335px;
+	top:-330px;
 	text-align:right;
 	float:right;
     height: 20px;
@@ -185,7 +254,7 @@ ol.sc-trackslist li {
 
 .sc-scrubber .sc-buffer {
     height: 20px;
-    background:#191919;
+    background:#5D4141;
     position: relative;
     top: 0px;
 }
@@ -207,14 +276,14 @@ ol.sc-trackslist li {
 .sc-time-indicators {
     color: white;
     text-shadow: none;
-    padding-top:4px;
+    padding-top:1px;
 }
 .active{
 
 }
 /* Side navigation style */
 .ui-header.ui-bar-b.ui-header-fixed.slidedown {
-    background-color:white;
+    background: rgba('0, 0, 0, .7');
     font-family: 'Ubuntu', sans-serif;  
     font-weight:700;
     text-shadow:none;
@@ -222,7 +291,7 @@ ol.sc-trackslist li {
     border-bottom:1px solid #111111;
     position:fixed;
     padding:25px 0 0 0;
-    color:black;
+    color:white;
 }
 
 .menu-icon{
@@ -250,6 +319,24 @@ a.ui-link {
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 /* The navigation menu links */
+
+/*.nav-anger{
+	font-family: 'helv_childrenregular';
+}
+.nav-joy{
+    font-family: 'odudabold';
+}
+.nav-serenity{
+    font-family: 'moonlight';
+}
+.nav-sadness{
+    font-family: 'underwood_championregular';
+}
+.nav-love{
+    font-family: 'fonartoregular';
+
+}
+*/
 .sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
@@ -301,3 +388,6 @@ a.closebtn.ui-link {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
 }
+
+
+/* Footer */
