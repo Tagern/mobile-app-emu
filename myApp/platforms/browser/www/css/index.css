@@ -183,7 +183,12 @@ h1 {
 
 
 
-/*       HOME PAGE          */       
+/*       HOME PAGE          */    
+
+.logo{
+    width:200px;
+    padding:20px 0 70px 0;
+}   
 
 #article1{
     background-color:#000;
@@ -196,25 +201,26 @@ h1 {
     text-shadow: none;
 }
 
-#article1 h2{
-    color:white;
-    font-size:1em;
-    font-weight:300;
-    text-shadow: none;
-}
 
 #article1 p{
     color:white;
     text-shadow: none;
     font-size:.8em;
+    font-weight:300;
+    font-family: 'Raleway', sans-serif;    
+    line-height:1.5em;
+    text-align:left;
+    margin-left: 20px;
+
 }
 
 #swipe-left{
-    width:100px
+    width:120px;
+    visibility:hidden;
 }
 .treble-clef{
     width:40px;
-    margin:50px 0 0 0;
+    margin:105px 0 0 0;
     z-index:1;
     left:-30px;
     position:absolute;
@@ -266,7 +272,7 @@ h1 {
 }
 
 .all-lines{
-    margin:100px 0 0 -50px;
+    margin:14vh 0 0 -50px;
     z-index:100;
     text-shadow:none;
 }
@@ -300,7 +306,7 @@ h1 {
 }
 
 .all-lines-anger{
-    margin:290px 0 0 -75px;
+    margin:51vh 0 0 -75px;
 }
 
 #anger-note{
@@ -360,7 +366,7 @@ h1 {
 }
 
 .all-lines-joy{
-    margin:300px 0 0 -75px;
+    margin:53vh 0 0 -75px;
 }
 
 #joy-note{
@@ -421,7 +427,7 @@ h1 {
 }
 
 .all-lines-calm{
-    margin:310px 0 0 -75px;
+    margin:55vh 0 0 -75px;
 }
 
 #calm-note{
@@ -481,7 +487,7 @@ h1 {
 }
 
 .all-lines-sadness{
-    margin:320px 0 0 -75px;
+    margin:57vh 0 0 -75px;
 }
 
 #sadness-note{
@@ -494,7 +500,7 @@ h1 {
 #sadness-sadness-note{
     animation-delay: .6s;
     margin-left:-10px;
-    width:60%;
+    width:63%;
     border:none;
     height:2px;
     background-color:blue;
@@ -507,6 +513,7 @@ h1 {
     height:8px;
     border-radius:50%;
     border:2px solid white;
+    margin-left: 154px;
 }
 
 .sadness-icon{
@@ -542,7 +549,7 @@ h1 {
 }
 
 .all-lines-love{
-    margin:330px 0 0 -75px;
+    margin:59vh 0 0 -75px;
 }
 
 #love-note{

@@ -97,7 +97,7 @@ a:visited{
 	color:white;
 	font-family: 'Ubuntu', sans-serif;	
 	font-weight:700;
-	font-size:.9em;
+	font-size:.74em;
 	text-align:right;
 	padding:5px 7px 0 5px;
 	margin:-15px 0 5px 0;
@@ -344,35 +344,39 @@ ol.sc-trackslist li {
     padding: 15px 0 15px 0;
 }
 
-
 .sc-scrubber {
     height: 20px;
     background: #161616;
     width:60%;
     margin:7px;
     position:absolute;
-    top:434px;
-    right:0;
+    top:428px;
+    right:0px;
 }
 .sc-scrubber img {
     display: none;
 }
 
+.sc-waveform-container {
+    position: relative;
+    left:0;
+}
+
 .sc-scrubber-wrapper {
-    position:relative;
     height: 20px;
     display: block;
 }
 
 .sc-scrubber .sc-time-span {
-    height: 20px;
+    height: 22px;
     position: relative;
+    width: 100%;
 }
 
 .sc-scrubber .sc-buffer {
     height: 20px;
     background:#303030;
-    position: relative;
+    position: absolute;
     top: 0px;
 }
 
@@ -467,6 +471,10 @@ a.closebtn.ui-link {
     color: #f1f1f1;
 }
 
+.nav-logo img{
+    width:150px;
+    margin:30px 0 0 5px;
+}
 
 /* Position and style the close button (top right corner) */
 .closebtn {

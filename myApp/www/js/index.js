@@ -118,9 +118,6 @@ function lovepage(){
 
 /* END END ONCLICKS TO LINK TO THE RELEVANT PLAYLIST PAGE END END*/
 
-/* CACHING IMAGES */
-
-
 /* SHOWING INTERNET CONNECTION */
 
 var internetOff = document.addEventListener("offline", offlineFunction, false);
@@ -136,5 +133,52 @@ function offlineFunction() {
 function onlineFunction() {
     document.getElementById('main-container').style.display="block";
     document.getElementById('offline-text').style.display="none";
-
 }
+
+/* Delayed gif image */
+
+setTimeout(function(){
+    document.getElementById('swipe-left').style.visibility="visible";
+}, 3500);
+
+
+/* CACHING IMAGES */
+  window.onload=function(){
+
+    ImgCache.options.debug = true;
+    ImgCache.options.chromeQuota = 50*1024*1024;
+
+    ImgCache.init(function () {
+        console.log('ImgCache init: success!');
+
+        // from within this function you're now able to call other ImgCache methods
+        // or you can wait for the ImgCacheReady event
+
+
+        var target = $('img');
+          ImgCache.cacheFile(target.attr('src'), function () {
+            ImgCache.useCachedFile(target, function () {
+              console.log('now using local copy');
+            }, function(){
+              console.log('could not load from cache');
+            })
+          });
+
+          ImgCache.isCached(target.attr('src'), function(path, success) {
+            if (success) {
+              // already cached
+              ImgCache.useCachedFile(target);
+            } else {
+              // not there, need to cache the image
+              ImgCache.cacheFile(target.attr('src'), function () {
+                ImgCache.useCachedFile(target);
+              });
+            }
+        });
+
+        }, function () {
+            console.log('ImgCache init: error! Check the log for errors');
+    });
+    
+      
+  }

@@ -505,11 +505,15 @@
             .append('<a href="#play" class="sc-play"></a> <a href="#pause" class="sc-pause hidden"></a>')
           .end()
           .append('<a href="#info" class="sc-info-toggle">Info</a>')
-          .append('<div class="sc-scrubber"></div>')
+
+          .append('<div class="scrubber-wrapper-test"><div class="sc-scrubber"></div></div>')
             .find('.sc-scrubber')
+
               .append('<div class="sc-volume-slider"><span class="sc-volume-status" style="width:' + soundVolume +'%"></span></div>')
-              .append('<div class="sc-time-span"><div class="sc-waveform-container"></div><div class="sc-buffer"></div><div class="sc-played"></div></div>')
+              .append('<div class="scrubber-container-test"><div class="sc-time-span"><div class="sc-waveform-container"></div><div class="sc-buffer"></div><div class="sc-played"></div></div></div>')
               .append('<div class="sc-time-indicators"><span class="sc-position"></span> | <span class="sc-duration"></span></div>');
+
+
 
         // load and parse the track data from SoundCloud API
         loadTracksData($player, links, opts.apiKey);
@@ -655,7 +659,7 @@
   var scrub = function(node, xPos) {
     var $scrubber = $(node).closest('.sc-time-span'),
         $buffer = $scrubber.find('.sc-buffer'),
-        $available = $scrubber.find('.sc-waveform-container img'),
+        $available = $scrubber.find('.sc-waveform-container'),
         $player = $scrubber.closest('.sc-player'),
         relative = Math.min($buffer.width(), (xPos  - $available.offset().left)) / $available.width();
     onSeek($player, relative);

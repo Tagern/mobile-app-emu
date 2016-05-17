@@ -28,7 +28,7 @@
 
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-
+        <link href='https://fonts.googleapis.com/css?family=Raleway:400,500,300,600' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,700,500,300' rel='stylesheet' type='text/css'>
 
         <link rel="stylesheet" type="text/css" href="css/index.css" />
@@ -47,14 +47,12 @@
             <div data-role="page" id="article1">
                 <div data-role="content">
                     <div class="app">
-                        <img src="img/logo.png"/>
-                        <h1>E-mu</h1>
-                        <h2>The emotion based music app</h2>
-                        <div id="deviceready" class="blink">
+                        <img class="logo" src="img/logo.svg"/>
+<!--                     <div id="deviceready" class="blink">
                             <p class="event listening">Connecting to Device</p>
                             <p class="event received">Device is Ready</p>
-                        </div>
-                        <p>Swipe left to see emotions</p>
+                        </div> -->
+                        <p>Swipe left to select an emotion</p>
                         <img id="swipe-left" src="img/swipeLeft.gif"/>
                         <img class="treble-clef animated zoomIn" src="img/treble-clef.png"/>
                         <div class="all-lines">
@@ -152,13 +150,13 @@
         <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
+
+        <script src="js/imgcache.js"></script>
+
         <script type="text/javascript">
             app.initialize();
         </script>
 
-
-        <!-- MAKE SURE I REMOVE THIS BEFORE SUBMISSION!!!!!! -->
-        <script src="http://192.168.1.156:8080/target/target-script-min.js#anonymous"></script>
         
     </body>
 </html>

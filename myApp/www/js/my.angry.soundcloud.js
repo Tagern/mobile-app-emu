@@ -10,62 +10,50 @@ $(document).ready(function() {
     });
 
     SC.get('/playlists/199853951?client_id=011f459dffafe1e481d9a287a17656cd').then(function(playlists) { 
-        // var tracks = [];
 
         $(playlists).each(function(index, playlist) {
 
                 $(playlist.tracks).each(function(i, track) {
                     var trackURL = (track.permalink_url);
                     tracks[i] = trackURL;
-
-                    // var trackArt = (track.artwork_url);
                 });
         }); 
-
-
-        // var currentTrack = tracks[Math.floor(tracks.length * Math.random())];
-        // initializePlayer(currentTrack);
 
         playSounds();
 
     });
 });
 
-// function initializePlayer(track) {
-//     SC.oEmbed(track,  { 
-//           auto_play: true,    
-//           iframe: true,  
-//           enable_api: true,  
-//           randomize: true, 
-//           element: document.getElementById('player')
-//      });
-// }
+function initializePlayer(track) {
+    SC.oEmbed(track,  { 
+          auto_play: true,    
+          iframe: true,  
+          enable_api: true,  
+          randomize: true, 
+          element: document.getElementById('player')
+     });
+}
 
 
 function hasPlayed(sound){
 
     if (playedSounds.length == tracks.length) {
-
         // We've played all of the sounds. Reset and start again.
         playedSounds = [];
         playedSounds.push(sound);
         return false;
-
     }
 
-  // We haven't played all the sounds yet but check to see whether we've played the current one.
     for (var i = 0; i < playedSounds.length; i++)
         if (playedSounds[i] == sound)
             return true;
 
-    // Note that we've now played this sound.
+    // We have now played this sound.
     playedSounds.push(sound);
     return false;
-
 }
 
 function playSounds() {
-
     var index = Math.floor(Math.random() * (tracks.length));
 
     // Loop until we've found a sound that we've not yet played.
@@ -83,8 +71,5 @@ function playSounds() {
      });
 
     console.log(tracks[index]);
-
-
-    // $("#player").html("<embed src=\"" + tracks[index] + "\" hidden=\"true\" autostart=\"true\" />");
 
 }
